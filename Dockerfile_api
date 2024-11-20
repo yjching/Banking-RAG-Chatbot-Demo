@@ -1,0 +1,8 @@
+FROM abpzzareg.azurecr.io/llm-base-image 
+
+# COPY requirements_api.txt .
+COPY rag_data/ rag_data/
+COPY api.py .
+
+EXPOSE 8089
+CMD ["python", "api.py"]
